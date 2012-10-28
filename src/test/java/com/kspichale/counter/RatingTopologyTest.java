@@ -2,7 +2,7 @@ package com.kspichale.counter;
 
 import org.junit.Test;
 
-import com.kspichale.strom_demo.RatingTopology;
+import com.kspichale.strom_demo.RankingTopology;
 
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
@@ -17,7 +17,7 @@ public class RatingTopologyTest {
 		conf.setNumWorkers(4);
 
 		LocalCluster cluster = new LocalCluster();
-		cluster.submitTopology("rating", conf, RatingTopology.buildTopology(LoggingData.createTestData()));
+		cluster.submitTopology("rating", conf, RankingTopology.buildTopology(LoggingData.createTestData()));
 		Utils.sleep(10000);
 		cluster.killTopology("rating");
 		cluster.shutdown();

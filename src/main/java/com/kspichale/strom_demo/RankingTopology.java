@@ -6,7 +6,7 @@ import backtype.storm.generated.StormTopology;
 import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.tuple.Fields;
 
-public class RatingTopology {
+public class RankingTopology {
 
 	private static final String RANKING_LIST_BOLT = "rankingListBolt";
 	private static final String COUNTING_BOLT = "countingBolt";
